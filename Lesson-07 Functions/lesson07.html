@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+
+    function greet(name) {
+      if (!name) {
+        console.log('Hi there!');
+      } else {
+        console.log(`Hello ${name}`);
+      }
+    }
+
+    greet('Mukul');
+    greet('Anmol');
+    greet();
+
+    function convertToFahrenheit(celcius) {
+      const fahrenheit = ((celcius * 9/5) + 32);
+
+      return fahrenheit;
+    }
+
+    console.log(convertToFahrenheit(25));
+    console.log(convertToFahrenheit(50));
+
+    function convertToCelcius(fahrenheit) {
+      const celcius = ((fahrenheit - 32) * 5/9);
+
+      return `${fahrenheit} degree fahrenheit: ${celcius} degree celcius`;
+    }
+
+    console.log(convertToCelcius(86));
+    console.log(convertToCelcius(50));
+
+    function convertTemperature(degrees, unit) {
+      if (unit === 'C') {
+        console.log(`${((degrees * 9/5) + 32)} deg F`);
+      } else if (unit === 'F') {
+        console.log(`${((degrees - 32) * 5/9)} deg C`);
+      }
+    }
+
+    convertTemperature(25, 'C');
+    convertTemperature(86, 'F');
+
+    function convertLength(length, from, to) {
+
+      if (from ==='km' && to === 'miles') {
+        console.log(`${length} ${from}: ${(length / 1.6)} ${to}`);
+      } else if (from === 'miles' && to === 'km') {
+        console.log(`${length} ${from}: ${length * 1.6} ${to}`);
+      } else if ((from === 'miles' && to === 'miles') || (from === 'km' && to === 'km')) {
+        console.log(`${length} ${from}: ${length} ${to}`);
+      } else if (from === 'miles' && to === 'ft') {
+        console.log(`${length} ${from}: ${(length * 5280)} ${to}`);
+      } else if (from === 'ft' && to === 'miles') {
+        console.log(`${length} ${from}: ${(length / 5280)} ${to}`);
+      } else {
+        console.log('Invalid unit')
+      }
+
+    }
+
+    convertLength(32, 'km', 'miles');
+    convertLength(64, 'km', 'miles');
+    convertLength(50, 'miles', 'km');
+    convertLength(100, 'miles', 'km');
+    convertLength(60, 'miles', 'miles');
+    convertLength(70, 'miles', 'miles');
+    convertLength(40, 'km', 'km');
+    convertLength(80, 'km', 'km');
+    convertLength(1, 'miles', 'ft');
+    convertLength(1.5, 'miles', 'ft');
+    convertLength(5280, 'ft', 'miles');
+    convertLength(7920, 'ft', 'miles');
+    convertLength(7920, 'ft', 'mils');
+    convertLength(7920, 'feet', 'mils');
+
+
+  </script>
+</body>
+</html>
