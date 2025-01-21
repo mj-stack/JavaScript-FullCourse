@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="lesson10.css">
+</head>
+<body>
+
+  <button class="amazon-button">Add to Cart</button>
+  <hr>
+
+  <button class="uber-button1">Request now</button>
+  <button class="uber-button2">Schedule for later</button>
+  <hr>
+
+  <button class="js-button">Test</button>
+  <br>
+  <hr>
+
+  <button class="gaming-button" onclick="
+    toggleButton('.gaming-button');
+  ">Gaming</button>
+  <br>
+  <hr>
+
+  <button class="gaming-button js-gaming" onclick="
+    toggleButton('.js-gaming');
+  ">Gaming</button>
+  <button class="gaming-button js-music" onclick="
+    toggleButton('.js-music');
+  ">Music</button>
+  <button class="gaming-button js-tech" onclick="
+    toggleButton('.js-tech');
+  ">Tech</button>
+  <br>
+  <hr>
+
+  <button class="gaming-button js-gaming2" onclick="
+    checkButton('.js-gaming2');
+  ">Gaming</button>
+  <button class="gaming-button js-music2" onclick="
+    checkButton('.js-music2');
+  ">Music</button>
+  <button class="gaming-button js-tech2" onclick="
+    checkButton('.js-tech2');
+  ">Tech</button>
+
+  <script src="lesson10.js"></script>
+
+</body>
+</html>

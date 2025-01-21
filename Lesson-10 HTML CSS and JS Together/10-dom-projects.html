@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Projects</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    .subscribe-button {
+      background-color: black;
+      color: white;
+      border: none;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-bottom: 35px;
+    }
+
+    .is-subscribed {
+      background-color: rgb(240, 240, 240);
+      color: black;
+    }
+
+    .cost-input {
+      padding: 10px;
+      font-size: 15px;
+    }
+    
+    .calculate-button {
+      background-color: green;
+      color: white;
+      border: none;
+      padding: 12px 15px;
+      font-size: 15px;
+    }
+
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button onclick="
+    subscribe();
+  " class="js-subscribe-button subscribe-button">Subscribe</button>
+
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping.</p>
+  <p>Orders over $40 = FREE shipping.</p>
+  <input type="text" placeholder="Cost of order" class="js-total-cost cost-input" onkeydown="
+    handleCostKeydown(event);
+  ">
+  <button onclick="
+    calculateTotalCost();
+  " class="calculate-button">Calculate</button>
+  <p class="js-display-error error"></p>
+  <p class="js-display-total-cost"></p>
+
+
+  <script>
+
+    function subscribe() {
+      buttonElement = document.querySelector('.js-subscribe-button');
+
+      if (buttonElement.innerText === 'Subscribe') {
+        buttonElement.innerHTML = 'Subscribed';
+        buttonElement.classList.add('is-subscribed');
+      } else {
+        buttonElement.innerHTML = 'Subscribe';
+        buttonElement.classList.remove('is-subscribed');
+      }
+    }
+
+    function calculateTotalCost() {
+      inputElement = document.querySelector('.js-total-cost');
+      let cost = Number(inputElement.value);
+
+      if (cost < 0) {
+        document.querySelector('.js-display-error').innerHTML = `Error: Cost cannot be less than $0`;
+        return;
+      } else {
+        document.querySelector('.js-display-error').innerHTML = ``;
+        cost *= 100;
+      }
+
+      
+      if (cost < 4000) {
+        cost += 1000;
+      }
+      cost /= 100;
+      document.querySelector('.js-display-total-cost').innerHTML = `$${cost}`; 
+    }
+
+    function handleCostKeydown(event) {
+      if (event.key === 'Enter') {
+        calculateTotalCost();
+      }
+    }
+
+  </script>
+
+</body>
+</html>
