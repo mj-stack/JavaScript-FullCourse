@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // const nums = [10, 20, 30];
+    // console.log(nums);
+
+    // nums[2] = 99;
+    // console.log(nums);
+
+    // function getLastValue(array) {
+    //   console.log(array[array.length - 1])
+    // }
+
+    // getLastValue([1, 20, 22, 24, 5]);
+    // getLastValue(['hi', 'hello', 'good']);
+
+    // function arraySwap(array) {
+    //   let firstValue = array[0];
+    //   let lastValue = array[array.length - 1];
+
+    //   array[0] = lastValue;
+    //   array[array.length-1] = firstValue;
+
+    //   console.log(array);
+    // }
+
+    // arraySwap([1, 20, 22, 24, 5]);
+    // arraySwap(['hi', 'hello', 'good']);
+
+    // for (let i = 0; i <= 10; i += 2) {
+    //   console.log(i);
+    // }
+
+    // for (let i = 5; i >= 0; i--) {
+    //   console.log(i);
+    // }
+
+    // let i = 0;
+
+    // while (i <= 10) {
+    //   console.log(i);
+    //   i+=2;
+    // }
+
+    // let i = 5;
+
+    // while (i >= 0) {
+    //   console.log(i);
+    //   i--;
+    // }
+
+
+    // const newArray = [];
+    
+    // function addOne(array) {
+    //   for (let i = 0; i < array.length; i++) {
+    //     const num = array[i];
+        
+    //     newArray.push(num + 1);
+    //   }
+      
+    //   console.log(newArray);
+    // }  
+
+
+    // addOne([1, 2, 3]);
+    // addOne([-2, -1, 0, 99]);
+
+    // const newArray = [];
+
+    // function addNum(array, add) {
+
+    //   for (i = 0; i < array.length; i++) {
+    //     const num = array[i];
+
+    //     newArray.push(num + add);
+    //   }
+    //   console.log(newArray);
+    // }
+
+    // // addNum([1, 2, 3], 2);
+    // // addNum([1, 2, 3], 3);
+    // addNum([-2, -1, 0, 99], 2);
+
+    // const newArray = [];
+
+    // function addArrays(array1, array2) {
+    //   for (let i = 0; i < array1.length; i++) {
+    //     let num1 = array1[i];
+    //     let num2 = array2[i];
+
+    //     newArray.push(num1 + num2);
+    //   }
+
+    //   console.log(newArray);
+    // }
+
+    // addArrays([1, 1, 2], [1, 1, 3]);
+
+    // const onlyPositive = [];
+
+    // function countPositive(nums) {
+    //   let result = 0;
+
+    //   for (let i = 0; i < nums.length; i++) {
+    //     const num = nums[i];
+    //     if (num > 0) {
+    //       result++;
+    //     }
+    //   }
+
+    //   return result;
+    // }
+
+    // console.log(countPositive([1,-3, 5]));
+
+    
+    // function minMax(nums) {
+    //   const myObject = {
+    //     min: nums[0],
+    //     max: nums[0]
+    //   }
+
+    //   for (i = 0; i < nums.length; i++) {
+    //     if (nums[i] < myObject.min) {
+    //       myObject.min = nums[i];
+    //     } else if (nums[i] > myObject.max) {
+    //       myObject.max = nums[i];
+    //     }
+    //   }
+
+    //   return myObject;
+    // }
+
+    // console.log(minMax([1, -3, 5]));
+    // console.log(minMax([-2, 3, -5, 7, 10]));
+    const fruitCount = {}
+
+    function countWords(words) {
+
+      for (i = 0; i < words.length; i++) {
+        let fruit = words[i];
+
+        if (!fruitCount[fruit]) {
+          fruitCount[fruit] = 1;
+        } else {
+          fruitCount[fruit]++;
+        }
+      }
+
+      return fruitCount;
+    }
+
+    // console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+    console.log(countWords(['apple', 'grape', 'apple', 'apple', 'grape']));
+
+  </script>
+</body>
+</html>
