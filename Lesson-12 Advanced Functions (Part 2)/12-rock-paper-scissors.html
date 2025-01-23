@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors - Game</title>
+  <link rel="stylesheet" href="12-rock-paper-scissors.css">
+</head>
+<body>
+  <div class="game-div">
+    <p class="title">Rock Paper Scissors</p>
+    
+    <button class="move-button js-rock-button">
+      <img src="rock-emoji.png" class="move-icon">  
+    </button>
+
+    <button class="move-button js-paper-button">
+      <img src="paper-emoji.png" class="move-icon">
+    </button>
+
+    <button class="move-button js-scissors-button">
+      <img src="scissors-emoji.png" class="move-icon">
+    </button>
+
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+
+    <button class="reset-score js-reset-score">
+      Reset Score
+    </button>
+
+    <button class="auto-play-button" onclick="
+      autoPlay();
+    ">Auto Play</button>
+
+    <div class="js-reset-confirmation reset-confirmation"></div>
+  </div>
+  <div class="info-div">
+    <h1>Game info</h1>
+    <p>
+      This is a simple rock-paper-scissors game. You can play the game by clicking on the buttons available or using keyboard shortcuts
+    </p>
+    <p>
+      For rock press 'r', For paper press 'p', For scissors press 's'
+    </p>
+    <p>
+      For auto play press 'a' and for reset score press 'backspace'
+    </p>
+  </div>
+
+  <script src="12-rock-paper-scissors.js"></script>
+
+</body>
+</html>
