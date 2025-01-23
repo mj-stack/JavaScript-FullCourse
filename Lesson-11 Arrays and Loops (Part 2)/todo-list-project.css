@@ -1,0 +1,49 @@
+body {
+  font-family: Arial;
+}
+
+.todo1 {
+  margin-bottom: 34px;
+}
+
+.todo2 {
+  margin-bottom: 34px;
+}
+
+.todo-title-grid,
+.todo-task-grid {
+  display: grid;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
+}
+
+.todo-title-grid {
+  margin-bottom: 10px;
+  align-items: stretch;
+}
+
+.todo-name-input,
+.todo-duedate-input {
+  font-size: 15px;
+  padding: 7px;
+  padding-left: 6px;
+}
+
+.add-todo-button {
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.delete-todo-button {
+  background-color: darkred;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
