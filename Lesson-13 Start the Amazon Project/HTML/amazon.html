@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon Clone</title>
+  <link rel="stylesheet" href="../Styles/general.css">
+  <link rel="stylesheet" href="../Styles/header.css">
+  <link rel="stylesheet" href="../Styles/main-products.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="header">
+    <section class="left-section">
+      <div class="amazon-logo-div">
+        <a class="back-to-home-amazon" href="">
+          <img class="amazon-logo" src="../Images/amazon-logo-white.png" alt="">
+        </a>
+      </div>
+    </section>
+    <section class="middle-section">
+        <input class="search-input" type="text" placeholder="Search">
+        <div class="search-icon-div">
+          <img class="search-icon" src="../Images/Icons/search-icon.png" alt="">
+        </div>
+    </section>
+    <section class="right-section">
+      <div class="returns-and-orders-div">
+        <a class="returns-and-orders-text-url" href="">
+          <span class="r-a-o-returns">Returns</span>
+          <span class="r-a-o-orders">& Orders</span>
+        </a>
+      </div>
+      <div class="cart-icon-div">
+        <a class="cart-icon-url" href="">
+          <img class="cart-icon" src="../Images/Icons/cart-icon.png" alt="">
+          <span class="cart-quantity-count js-cart-quantity-count">0</span>
+          <span class="cart-icon-text">Cart</span>
+        </a>  
+      </div>
+    </section>
+  </header>
+
+  <main class="products-grid js-products-grid" style="margin-bottom: 1000px;"></main>
+  
+
+  <script src="../Scripts/cart.js"></script>
+  <script src="../Scripts/products.js"></script>
+  <script src="../Scripts/amazon.js"></script>
+</body>
+</html>
