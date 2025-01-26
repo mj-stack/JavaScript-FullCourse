@@ -1,0 +1,57 @@
+.checkout-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 60px;
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section {
+  width: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.amazon-checkout-logo {
+  width: 100px;
+  margin-right: 25px;
+  margin-top: 11px;
+}
+
+.middle-section {
+  width: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-text {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.checkout-cart-items {
+  color: rgb(0, 113, 133);
+  font-weight: 500;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.right-section {
+  width: 250px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-section img {
+  height: 22px;
+}

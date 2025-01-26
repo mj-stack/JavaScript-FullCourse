@@ -58,4 +58,64 @@ export const products = [{
   },
   priceCents: '3499',
   quantity: '1'
+}, {
+  id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
+  image: '../Images/Products/plain-hooded-fleece-sweatshirt-yellow.jpg',
+  name: 'Plain Hooded Fleece Sweatshirt',
+  ratings: {
+    stars: '../Images/Ratings/rating-45.png',
+    count: '317'
+  },
+  priceCents: '2400',
+  quantity: '1'
+}, {
+  id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
+  image: '../Images/Products/luxury-tower-set-6-piece.jpg',
+  name: 'Luxury Towel Set - Graphite Gray',
+  ratings: {
+    stars: '../Images/Ratings/rating-45.png',
+    count: '144'
+  },
+  priceCents: '3599',
+  quantity: '1'
+}, {
+  id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
+  image: '../Images/Products/liquid-laundry-detergent-plain.jpg',
+  name: 'Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz',
+  ratings: {
+    stars: '../Images/Ratings/rating-45.png',
+    count: '305'
+  },
+  priceCents: '2899',
+  quantity: '1'
+}, {
+  id: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
+  image: '../Images/Products/knit-athletic-sneakers-gray.jpg',
+  name: 'Waterproof Knit Athletic Sneakers - Gray',
+  ratings: {
+    stars: '../Images/Ratings/rating-40.png',
+    count: '89'
+  },
+  priceCents: '3390',
+  quantity: '1'
+}, {
+  id: "5968897c-4d27-4872-89f6-5bcb052746d7",
+  image: '../Images/Products/women-chiffon-beachwear-coverup-black.jpg',
+  name: "Women's Chiffon Beachwear Cover Up - Black",
+  ratings: {
+    stars: '../Images/Ratings/rating-45.png',
+    count: '235'
+  },
+  priceCents: '2070',
+  quantity: '1'
+}, {
+  id: "aad29d11-ea98-41ee-9285-b916638cac4a",
+  image: '../Images/Products/round-sunglasses-black.jpg',
+  name: 'Round Sunglasses',
+  ratings: {
+    stars: '../Images/Ratings/rating-45.png',
+    count: '30'
+  },
+  priceCents: '1560',
+  quantity: '1'
 }];
