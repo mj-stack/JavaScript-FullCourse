@@ -1,3 +1,6 @@
+import {cart} from '../Scripts/cart.js';
+import { products } from './products.js';
+
 let productsHTML = '';
 
 products.forEach((product) => {
@@ -18,7 +21,7 @@ products.forEach((product) => {
           <span>$${(product.priceCents / 100).toFixed(2)}</span>
         </div>
         <div class="product-quantity">
-          <select class="quantity-selector" name="" id="">
+          <select class="quantity-selector js-quantity-selector-${product.productId}" name="" id="">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -47,19 +50,22 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     const productId = button.dataset.productId;
 
     let matchingItem;
-
+    
     cart.forEach((item) => {
       if (productId === item.productId) {
         matchingItem = item;
       }
     });
+    
+    const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`) || 1;
+    const quantity = Number(quantitySelector.value) || 1;
 
     if(matchingItem) {
       matchingItem.quantity++;
     } else {
       cart.push({
-        productId: productId,
-        quantity: 1
+        productId,
+        quantity
       });
     }
 
