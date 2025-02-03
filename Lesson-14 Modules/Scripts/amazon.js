@@ -1,5 +1,6 @@
 import { cart, addToCart } from './cart.js';
 import { products } from './products.js';
+// import { totalQuantityInCart } from './cart.js';
 
 let productsHTML = '';
 
@@ -35,6 +36,10 @@ products.forEach((product) => {
           </select>
         </div>
         <div class="add-to-cart">
+          <div class="img-popup-div" data-product-id="${product.id}">
+            <img class="checkmark" src="../Images/Icons/checkmark.png" />
+            <p class="js-added-popup">Added</p>
+          </div>
           <button class="add-to-cart-button js-add-to-cart" data-product-id="${product.id}">Add to Cart</button>
         </div>
       </div>
@@ -64,5 +69,18 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
 
     addToCart(productId, selectedQuantity);
     updateCartQuantity();
+
+    // const popupInput = document.querySelectorAll('.img-popup-div').forEach((popup) => {
+    //   popup.classList.add(`img-popup-div2-${productId}`);
+    // })
+
+    const popup = document.querySelector(`.img-popup-div[data-product-id="${productId}"]`);
+
+    if (popup) {
+      popup.classList.add('img-popup-div2');
+      setTimeout(() => {
+        popup.classList.remove('img-popup-div2');
+      }, 2000);
+    }
   });
 });

@@ -1,5 +1,6 @@
 import { products } from "../products.js";
 import { cart, removeItem } from "../cart.js";
+// import { updateCartQuantity } from '../amazon.js';
 
 let cartSummaryHTML = '';
 
@@ -21,7 +22,7 @@ let cartSummaryHTML = '';
   
     // Handle case where no matching product is found
     if (!matchingProduct) {
-      console.error(`Product with ID ${productId} not found in the products array.`);
+      // console.log(`Product with ID ${productId} not found in the products array.`);
       return; // Skip this iteration
     }
 
@@ -105,3 +106,10 @@ document.querySelectorAll('.js-delete-item').forEach((item) => {
     container.remove();
   });
 });
+
+// hello();
+// const today = dayjs();
+// console.log(today);
+
+// const deliveryDate = today.add('7', 'days');
+// console.log(deliveryDate.format('dddd, MMMM d'));

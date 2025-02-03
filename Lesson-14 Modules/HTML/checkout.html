@@ -11,8 +11,7 @@
   <link rel="stylesheet" href="../Styles/Checkout/checkout-order-summary.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -42,11 +41,42 @@
 
       <section class="checkout-items-div"></section>
 
-      <section class="order-summary-div"></section>
+      <section class="order-summary-div">
+
+        <div class="order-summary-text">
+          <p>Order Summary</p>
+        </div>
+        <div class="item-quantity-price-div">
+          <p>Items (0):</p>
+          <p>$0.00</p>
+        </div>
+        <div class="shipping-handling-div">
+          <p>Shipping & handling:</p>
+          <p>$0.00</p>
+        </div>
+        <div class="total-before-tax-div">
+          <p>Total before tax:</p>
+          <p>$0.00</p>
+        </div>
+        <div class="estimated-tax-div">
+          <p>Estimated tax (10%):</p>
+          <p>$0.00</p>
+        </div>
+        <div class="order-total-div">
+          <p>Order total:</p>
+          <p>$0.00</p>
+        </div>
+        <div class="place-order-button-div">
+          <button>Place your order</button>
+        </div>
+
+      </section>
     </div>
 
   </main>
 
+  <script src="https://unpkg.com/supersimpledev@1.0.1/hello.js"></script>
+  <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
   <script type="module" src="../Scripts/Checkout/checkout.js"></script>
 
 </body>

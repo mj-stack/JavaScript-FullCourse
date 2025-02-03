@@ -101,6 +101,29 @@
   display: flex;
   justify-content: center;
   align-items: end;
+  position: relative;
+}
+
+.img-popup-div {
+  opacity: 0;
+}
+
+.img-popup-div2 {
+  opacity: 1;
+}
+
+.checkmark {
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
+.js-added-popup {
+  position: absolute;
+  margin: 0;
+  top: 15px;
+  left: 60px;
 }
 
 .add-to-cart-button {
@@ -112,4 +135,12 @@
   border: none;
   background-color: rgb(255, 216, 20);
   cursor: pointer;
+  /* z-index: -1; */
+}
+.add-to-cart-button:hover {
+  background-color: rgb(240, 200, 0);
+}
+
+.add-to-cart-button:active {
+  background-color: rgb(224, 187, 2);
 }
