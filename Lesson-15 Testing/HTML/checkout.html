@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../Styles/Checkout/checkout-header.css">
+  <link rel="stylesheet" href="../Styles/Checkout/checkout-general.css">
+  <link rel="stylesheet" href="../Styles/Checkout/checkout-items.css">
+  <link rel="stylesheet" href="../Styles/Checkout/checkout-order-summary.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="checkout-header">
+
+    <div class="left-section">
+      <a href="amazon.html">
+        <img class="amazon-checkout-logo" src="../Images/amazon-logo.png" alt="">
+      </a>
+    </div>
+
+    <div class="middle-section">
+      <span class="checkout-text">Checkout (<span class="checkout-cart-items">2 Items</span>)</span>
+    </div>
+
+    <div class="right-section">
+      <img src="../Images/Icons/checkout-lock-icon.png" alt="">
+    </div>
+
+  </header>
+
+  <main>
+
+    <p class="review-your-order">Review your order</p>
+
+    <div class="main-section-div">
+
+      <section class="checkout-items-div"></section>
+
+      <section class="order-summary-div">
+
+        <div class="order-summary-text">
+          <p>Order Summary</p>
+        </div>
+        <div class="item-quantity-price-div">
+          <p>Items (0):</p>
+          <p>$0.00</p>
+        </div>
+        <div class="shipping-handling-div">
+          <p>Shipping & handling:</p>
+          <p>$0.00</p>
+        </div>
+        <div class="total-before-tax-div">
+          <p>Total before tax:</p>
+          <p>$0.00</p>
+        </div>
+        <div class="estimated-tax-div">
+          <p>Estimated tax (10%):</p>
+          <p>$0.00</p>
+        </div>
+        <div class="order-total-div">
+          <p>Order total:</p>
+          <p>$0.00</p>
+        </div>
+        <div class="place-order-button-div">
+          <button>Place your order</button>
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <script src="https://unpkg.com/supersimpledev@1.0.1/hello.js"></script>
+  <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+  <script type="module" src="../Scripts/Checkout/checkout.js"></script>
+
+</body>
+
+</html>
