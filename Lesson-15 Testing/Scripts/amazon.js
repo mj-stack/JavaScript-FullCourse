@@ -56,6 +56,7 @@ function updateCartQuantity() {
   })
 
   document.querySelector('.js-cart-quantity-count').innerHTML = cartQuantity;
+  // document.querySelector('.checkout-cart-items').innerText = `${cartQuantity} Items`;
 }
 
 updateCartQuantity();
