@@ -1,8 +1,40 @@
 import { products } from "../products.js";
 import { cart, removeItem } from "../cart.js";
+import { orderSummary } from "../Checkout/orderSummary.js";
 // import { updateCartQuantity } from '../amazon.js';
+// console.table(orderSummary);
+
+updateCartQuantityOnCheckoutPage();
 
 let cartSummaryHTML = '';
+let orderSummaryHTML = `
+  <div class="order-summary-text">
+    <p>Order Summary</p>
+  </div>
+  <div class="item-quantity-price-div">
+    <p>Items (0):</p>
+    <p>$0.00</p>
+  </div>
+  <div class="shipping-handling-div">
+    <p>Shipping & handling:</p>
+    <p>$0.00</p>
+  </div>
+  <div class="total-before-tax-div">
+    <p>Total before tax:</p>
+    <p>$0.00</p>
+  </div>
+  <div class="estimated-tax-div">
+    <p>Estimated tax (10%):</p>
+    <p>$0.00</p>
+  </div>
+  <div class="order-total-div">
+    <p>Order total:</p>
+    <p>$0.00</p>
+  </div>
+  <div class="place-order-button-div">
+    <button>Place your order</button>
+  </div>
+`;
 
 // cart.forEach((cartItem) => {
 //   const productId = cartItem.productId;
@@ -18,13 +50,18 @@ let cartSummaryHTML = '';
     const productId = cartItem.productId;
   
     // Use `find` to get the matching product
+    
     const matchingProduct = products.find(product => product.id === productId);
-  
+
     // Handle case where no matching product is found
     if (!matchingProduct) {
       // console.log(`Product with ID ${productId} not found in the products array.`);
       return; // Skip this iteration
     }
+
+    // console.log(cart);
+    
+
 
   cartSummaryHTML += 
   `
@@ -94,8 +131,40 @@ let cartSummaryHTML = '';
       </div>
     </div>
   `
+
+    orderSummaryHTML = 
+    `
+      <div class="order-summary-text">
+        <p>Order Summary</p>
+      </div>
+      <div class="item-quantity-price-div">
+        <p>Items (${updateCartQuantityOnCheckoutPage()}):</p>
+        <p>$${(matchingProduct.priceCents / 100).toFixed(2)}</p>
+      </div>
+      <div class="shipping-handling-div">
+        <p>Shipping & handling:</p>
+        <p>$0.00</p>
+      </div>
+      <div class="total-before-tax-div">
+        <p>Total before tax:</p>
+        <p>$0.00</p>
+      </div>
+      <div class="estimated-tax-div">
+        <p>Estimated tax (10%):</p>
+        <p>$0.00</p>
+      </div>
+      <div class="order-total-div">
+        <p>Order total:</p>
+        <p>$0.00</p>
+      </div>
+      <div class="place-order-button-div">
+        <button>Place your order</button>
+      </div>
+    `
+
 });
 document.querySelector('.checkout-items-div').innerHTML = cartSummaryHTML;
+document.querySelector('.order-summary-div').innerHTML = orderSummaryHTML;
 
 document.querySelectorAll('.js-delete-item').forEach((item) => {
   item.addEventListener('click', () => {
@@ -104,6 +173,7 @@ document.querySelectorAll('.js-delete-item').forEach((item) => {
 
     const container = document.querySelector(`.js-item-in-cart-${productId}`);
     container.remove();
+    updateCartQuantityOnCheckoutPage();
   });
 });
 
@@ -113,3 +183,20 @@ document.querySelectorAll('.js-delete-item').forEach((item) => {
 
 // const deliveryDate = today.add('7', 'days');
 // console.log(deliveryDate.format('dddd, MMMM d'));
+
+// console.log(cart[0].quantity);
+
+function updateCartQuantityOnCheckoutPage() {
+  let totalCartItems = 0;
+  for (let i = 0; i < cart.length; i++) {
+    totalCartItems += cart[i].quantity;
+  }
+
+  if (totalCartItems === 1) {
+    document.querySelector('.checkout-cart-items').innerHTML = `${totalCartItems} Item`;
+  } else {
+    document.querySelector('.checkout-cart-items').innerHTML = `${totalCartItems} Items`;
+  }
+
+  return `${totalCartItems}`;
+}
