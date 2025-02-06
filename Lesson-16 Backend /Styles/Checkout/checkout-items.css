@@ -1,0 +1,184 @@
+.main-section-div {
+  margin-left: 125px;
+  margin-right: 125px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-items-div {
+  height: 100%;
+  width: 750px;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+}
+
+.item-in-cart{
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 4px;
+  width: 750px;
+  height: 280px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-date-text {
+  height: 60px;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.delivery-date-text p {
+  color: green;
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  margin-left: 18px;
+  margin-bottom: 18px;
+}
+
+.item-info-div {
+  flex: 1;
+
+  display: flex;
+}
+
+.item-img-div {
+  width: 130px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.item-img-div img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.item-description-div {
+  flex: 1;
+}
+
+.item-name {
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.item-price {
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 16px;
+  color: rgb(177, 39, 4);
+  font-weight: 700;
+}
+
+.quantity-shifter {
+  margin: 0;
+  margin-top: 8px;
+  margin-left: 5px;
+}
+
+.update-quantity {
+  color: #017cb6;
+  cursor: pointer;
+}
+
+.update-quantity:hover {
+  color: darkred;
+}
+
+.delete-quantity {
+  color: #017cb6;
+  cursor: pointer;
+}
+
+.delete-quantity:hover {
+  color: darkred;
+}
+
+
+.item-delivery-div {
+  width: 320px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.choose-delivery-text-div {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.choose-delivery-text {
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 25px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.item-delivery-date1 {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.item-delivery-date2 {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.item-delivery-date3 {
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.radio-button-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+}
+
+.delivery-date-text-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-date-div {
+  flex: 1;
+}
+
+.delivery-date {
+  color: rgb(0, 118, 0);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.delivery-charge-div {
+  flex: 1;
+}
+
+.delivery-charge {
+  color: rgb(120, 120, 120);
+  font-weight: 400;
+  font-size: 15px;
+}

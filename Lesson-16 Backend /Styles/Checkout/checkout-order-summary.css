@@ -1,0 +1,133 @@
+.order-summary-div {
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 4px;
+  height: 320px;
+  width: 335px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* .order-summary-div div {
+  border: 1px solid gray;
+} */
+
+.order-summary-text {
+  height: 55px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.order-summary-text p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.item-quantity-price-div {
+  height: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-quantity-price-div p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Roboto, Arial;
+  color: rgb(33, 33, 33);
+}
+
+.shipping-handling-div {
+  height: 25px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shipping-handling-div p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Roboto, Arial;
+  color: rgb(33, 33, 33);
+}
+
+.total-before-tax-div {
+  height: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-before-tax-div p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Roboto, Arial;
+  color: rgb(33, 33, 33);
+}
+
+.estimated-tax-div {
+  height: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.estimated-tax-div p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Roboto, Arial;
+  color: rgb(33, 33, 33);
+}
+
+.order-total-div {
+  height: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-total-div p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Roboto, Arial;
+  color: rgb(177, 39, 4);
+}
+
+.place-order-button-div {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.place-order-button-div button {
+  height: 40px;
+  width: 300px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(255, 216, 20);
+  border: 1px solid rgb(252, 210, 0);
+  cursor: pointer;
+}
